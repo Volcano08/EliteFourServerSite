@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Bar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark grey background */
+            color: white; /* Text color */
+        }
+        #header-container {
+            background-image: url(../Images/HeaderBackground.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px; /* Adjust padding as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-links-container {
+            display: flex;
+            align-items: center;
+        }
+        .nav-link {
+            color: white; /* Text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 5px; /* Adjust spacing between links */
+            font-weight: bold; /* Make text bold */
+        }
+        #logo {
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin: 0 20px; /* Add space between logo and links */
+        }
+        #server-owner-container {
+            text-align: center;
+        }
+        #server-owner {
+            width: 200px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        #caption {
+            color: black; /* Text color */
+            font-weight: bold; /* Make text bold */
+            margin-top: 10px; /* Adjust margin as needed */
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-links-container">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="mods.html" class="nav-link">Mods</a>
+        </div>
+        <a href="home.html"> <!-- Replace "home.html" with the actual URL of your home page -->
+            <img src="../Images/Logo.png" alt="Logo" id="logo">
+        </a>
+        <div class="nav-links-container">
+            <a href="players.html" class="nav-link">Players</a>
+            <a href="#" class="nav-link">Extra Link</a>
+        </div>
+    </div>
+    <div id="server-owner-container">
+        <img src="../Images/Volcano08 Skin.png" alt="Volcano08 Skin" id="server-owner">
+        <p id="caption">Volcano08 - Server Owner</p>
+    </div>
+</body>
+</html>

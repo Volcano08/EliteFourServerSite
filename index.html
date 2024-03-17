@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EliteFourServer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(Images/BodyBackground.webp);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        #header-container {
+            background-image: url(Images/HeaderBackground.jpg);
+            background-size: cover;
+            background-position: center;
+            padding: 20px; /* Adjust padding as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-links-container {
+            display: flex;
+            align-items: center;
+        }
+        .nav-link {
+            color: black; /* Text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 0 5px; /* Adjust spacing between links */
+            font-weight: bold; /* Make text bold */
+        }
+        #logo {
+            width: 150px; /* Adjust width as needed */
+            height: auto; /* Maintain aspect ratio */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            margin: 0 20px; /* Add space between logo and links */
+        }
+        .sections-container {
+            display: flex;
+            justify-content: space-between;
+            width: 95%; /* Expanded width */
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .section {
+            padding: 40px;
+            background-color: rgba(220, 220, 220, 0.5); /* Light grey with transparency */
+            border-radius: 20px; /* Rounded corners */
+            color: black; /* Text color */
+            height: 350px; /* Expanded height */
+            width: calc(25% - 20px); /* Expanded width */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Center content horizontally */
+            margin-bottom: 30px; /* Add spacing between sections */
+        }
+        .section h2,
+        .section p {
+            text-align: center;
+            margin: 0;
+            font-size: 1.2em; /* Decreased font size */
+        }
+        .rules-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .rules-list li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-links-container">
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="SubSites/mods.html" class="nav-link">Mods</a>
+        </div>
+        <a href="home.html"> <!-- Replace "home.html" with the actual URL of your home page -->
+            <img src="Images/Logo.png" alt="Logo" id="logo">
+        </a>
+        <div class="nav-links-container">
+            <a href="players.html" class="nav-link">Players</a>
+            <a href="#" class="nav-link">Extra Link</a>
+        </div>
+    </div>
+
+    <div class="sections-container">
+        <section class="section" id="server-ip" onclick="copyIP('EliteFourServer.aternos.me:57519')">
+            <h2>Server IP</h2>
+            <p id="ip">Click to copy EliteFourServer.aternos.me:57519</p>
+        </section>
+
+        <section class="section" id="contact-email" onclick="copyEmail('EliteFourServer@outlook.com')">
+            <h2>Contact Email</h2>
+            <p>Click to copy EliteFourServer@outlook.com</p>
+        </section>
+
+        <section class="section" id="description">
+            <h2>Description</h2>
+            <p>Join our server for a creative and exciting adventure! Express yourself while surviving in the wild. Build, explore, and conquer the challenges of nature. There's always something new to discover and enjoy. Come and join us for a good time!</p>
+        </section>
+
+        <section class="section" id="rules">
+            <h2>Rules</h2>
+            <ul class="rules-list">
+                <li>You are allowed to use creative mode if you are actively building a base or structure.</li>
+                <li>You must have a waystone at your base.</li>
+                <li>No griefing or stealing from other players.</li>
+                <li>Respect other players and staff members.</li>
+                <li>No hacking, cheating, or exploiting glitches.</li>
+                <li>Do not spam or use offensive language in chat.</li>
+                <li>Follow instructions from staff members.</li>
+                <li>Additional rules may apply.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function copyIP(ip) {
+            navigator.clipboard.writeText(ip).then(function() {
+                var message = document.createElement('div');
+                message.textContent = 'IP copied to clipboard!';
+                message.style.position = 'fixed';
+                message.style.top = '50%';
+                message.style.left = '50%';
+                message.style.transform = 'translate(-50%, -50%)';
+                message.style.padding = '10px 20px';
+                message.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                message.style.color = 'white';
+                message.style.borderRadius = '5px';
+                message.style.zIndex = '9999';
+                document.body.appendChild(message);
+                setTimeout(function() {
+                    document.body.removeChild(message);
+                }, 2000); // Remove message after 2 seconds
+            });
+        }
+
+        function copyEmail(email) {
+            navigator.clipboard.writeText(email).then(function() {
+                var message = document.createElement('div');
+                message.textContent = 'Email copied to clipboard!';
+                message.style.position = 'fixed';
+                message.style.top = '50%';
+                message.style.left = '50%';
+                message.style.transform = 'translate(-50%, -50%)';
+                message.style.padding = '10px 20px';
+                message.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                message.style.color = 'white';
+                message.style.borderRadius = '5px';
+                message.style.zIndex = '9999';
+                document.body.appendChild(message);
+                setTimeout(function() {
+                    document.body.removeChild(message);
+                }, 2000); // Remove message after 2 seconds
+            });
+        }
+    </script>
+</body>
+</html>
